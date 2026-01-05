@@ -1,0 +1,423 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-04",
+  "templates": {
+    "daily": {
+      "id": "daily",
+      "title": "Daily Check-In",
+      "file": "templates/daily.md",
+      "type": "review",
+      "frequency": "daily",
+      "duration": "5 minutes",
+      "description": "Quick daily reflection on energy, wins, friction, and priorities",
+      "sections": [
+        "energy_level",
+        "meaningful_win",
+        "friction_point",
+        "let_go",
+        "priority_tomorrow"
+      ],
+      "tags": ["reflection", "quick", "daily"],
+      "difficulty": "beginner",
+      "version": "1.0.0"
+    },
+    "weekly": {
+      "id": "weekly",
+      "title": "Weekly Review",
+      "file": "templates/weekly.md",
+      "type": "review",
+      "frequency": "weekly",
+      "duration": "20 minutes",
+      "description": "Weekly reflection on signal vs noise, energy audit, and course corrections",
+      "sections": [
+        "what_moved_needle",
+        "what_was_noise",
+        "time_leaks",
+        "strategic_insight",
+        "energy_audit",
+        "wins_progress",
+        "challenges",
+        "relationships",
+        "goal_progress",
+        "one_adjustment"
+      ],
+      "tags": ["reflection", "strategy", "weekly"],
+      "difficulty": "beginner",
+      "version": "1.0.0"
+    },
+    "quarterly": {
+      "id": "quarterly",
+      "title": "Quarterly Review",
+      "file": "templates/quarterly.md",
+      "type": "review",
+      "frequency": "quarterly",
+      "duration": "90 minutes",
+      "description": "Comprehensive quarterly review of goals, Life Map, energy vs output, and course correction",
+      "sections": [
+        "goal_progress",
+        "life_map_checkin",
+        "energy_vs_output",
+        "strategic_insights",
+        "misalignment_detection",
+        "decisions_course_corrections",
+        "next_quarter_priorities",
+        "reflection"
+      ],
+      "tags": ["reflection", "strategy", "goals", "quarterly"],
+      "difficulty": "intermediate",
+      "version": "1.0.0"
+    },
+    "annual": {
+      "id": "annual",
+      "title": "Annual Review",
+      "file": "templates/annual.md",
+      "type": "review",
+      "frequency": "annual",
+      "duration": "4-6 hours",
+      "description": "Comprehensive annual reflection and planning using multiple frameworks",
+      "sections": [
+        "year_in_one_sentence",
+        "highlights",
+        "lowlights",
+        "goal_review",
+        "life_map_assessment",
+        "lessons_growth",
+        "relationships",
+        "work_career",
+        "health_energy",
+        "meaning_purpose",
+        "patterns_insights",
+        "stop_start_continue",
+        "next_year_vision",
+        "framework_updates",
+        "goal_setting",
+        "commitments"
+      ],
+      "tags": ["reflection", "strategy", "goals", "frameworks", "annual"],
+      "difficulty": "advanced",
+      "version": "1.0.0"
+    },
+    "north_star": {
+      "id": "north_star",
+      "title": "North Star",
+      "file": "templates/north_star.md",
+      "type": "foundational",
+      "frequency": "annual",
+      "duration": "30 minutes",
+      "description": "Foundational document defining who you are, what you're building, and what matters most",
+      "sections": [
+        "who_you_are",
+        "what_matters_most",
+        "definition_of_success_1year",
+        "definition_of_success_10year",
+        "non_negotiables",
+        "saying_no_to",
+        "unfair_advantages",
+        "known_weaknesses",
+        "how_you_want_to_feel"
+      ],
+      "tags": ["foundational", "identity", "values"],
+      "difficulty": "intermediate",
+      "version": "1.0.0"
+    },
+    "principles": {
+      "id": "principles",
+      "title": "Operating Principles",
+      "file": "templates/principles.md",
+      "type": "foundational",
+      "frequency": "annual",
+      "duration": "15 minutes",
+      "description": "Operating principles for decision-making and system usage",
+      "sections": [
+        "core_principles",
+        "custom_principles"
+      ],
+      "tags": ["foundational", "decision-making", "values"],
+      "difficulty": "beginner",
+      "version": "1.0.0"
+    },
+    "memory": {
+      "id": "memory",
+      "title": "Memory",
+      "file": "templates/memory.md",
+      "type": "foundational",
+      "frequency": "quarterly",
+      "duration": "30 minutes",
+      "description": "Pattern tracking and executive insights from past reviews",
+      "sections": [
+        "executive_pattern_summary",
+        "repeated_goals",
+        "recurring_themes",
+        "blind_spots",
+        "strengths",
+        "energy_drains",
+        "energy_sources",
+        "key_lessons",
+        "recurring_mistakes",
+        "insights_from_past_materials",
+        "personal_operating_manual"
+      ],
+      "tags": ["patterns", "insights", "learning"],
+      "difficulty": "intermediate",
+      "version": "1.0.0"
+    }
+  },
+  "frameworks": {
+    "annual_review": {
+      "id": "annual_review",
+      "title": "Annual Review Framework",
+      "file": "frameworks/annual_review.md",
+      "type": "framework",
+      "source": "Dr. Anthony Gustin",
+      "description": "Honest, pattern-finding reflection on the past year",
+      "tags": ["reflection", "annual", "gustin"],
+      "difficulty": "intermediate",
+      "version": "1.0.0"
+    },
+    "vivid_vision": {
+      "id": "vivid_vision",
+      "title": "Vivid Vision Framework",
+      "file": "frameworks/vivid_vision.md",
+      "type": "framework",
+      "source": "Tony Robbins / Cameron Herold",
+      "description": "Future narrative visioning in present tense",
+      "tags": ["vision", "future", "narrative"],
+      "difficulty": "intermediate",
+      "version": "1.0.0"
+    },
+    "ideal_life_costing": {
+      "id": "ideal_life_costing",
+      "title": "Ideal Life Costing Framework",
+      "file": "frameworks/ideal_life_costing.md",
+      "type": "framework",
+      "source": "Tim Ferriss",
+      "description": "Calculate what your ideal life actually costs",
+      "tags": ["finance", "lifestyle", "planning"],
+      "difficulty": "beginner",
+      "version": "1.0.0"
+    },
+    "life_map": {
+      "id": "life_map",
+      "title": "Life Map Framework",
+      "file": "frameworks/life_map.md",
+      "type": "framework",
+      "source": "Alex Lieberman",
+      "description": "Six dimensions of a well-lived life (career, relationships, health, meaning, finances, fun)",
+      "tags": ["balance", "holistic", "scoring"],
+      "difficulty": "beginner",
+      "version": "1.0.0"
+    }
+  },
+  "interviews": {
+    "past_year_reflection": {
+      "id": "past_year_reflection",
+      "title": "Past Year Reflection Interview",
+      "file": "interviews/past_year_reflection.md",
+      "type": "interview",
+      "frequency": "annual",
+      "duration": "60-90 minutes",
+      "description": "Guided self-interview for reflecting on the past 12 months",
+      "sections": [
+        "highlights",
+        "lowlights",
+        "lessons_growth",
+        "relationships",
+        "work_career",
+        "health_energy",
+        "meaning_purpose",
+        "synthesis"
+      ],
+      "tags": ["reflection", "annual", "interview"],
+      "difficulty": "intermediate",
+      "version": "1.0.0"
+    },
+    "identity_and_values": {
+      "id": "identity_and_values",
+      "title": "Identity and Values Interview",
+      "file": "interviews/identity_and_values.md",
+      "type": "interview",
+      "frequency": "annual",
+      "duration": "60 minutes",
+      "description": "Clarify who you are, what you stand for, and what you value most",
+      "sections": [
+        "identity",
+        "core_values",
+        "non_negotiables",
+        "beliefs_about_success",
+        "purpose_contribution",
+        "relationships",
+        "growth_change",
+        "synthesis"
+      ],
+      "tags": ["identity", "values", "foundational"],
+      "difficulty": "intermediate",
+      "version": "1.0.0"
+    },
+    "future_self_interview": {
+      "id": "future_self_interview",
+      "title": "Future Self Interview",
+      "file": "interviews/future_self_interview.md",
+      "type": "interview",
+      "frequency": "annual",
+      "duration": "45-60 minutes",
+      "description": "Interview your 5-year future self to clarify what you actually want",
+      "sections": [
+        "daily_life",
+        "work_career",
+        "relationships",
+        "health_energy",
+        "finances_lifestyle",
+        "meaning_purpose",
+        "fun_joy",
+        "reflection",
+        "challenges_growth",
+        "synthesis",
+        "returning_to_present"
+      ],
+      "tags": ["vision", "future", "interview"],
+      "difficulty": "intermediate",
+      "version": "1.0.0"
+    }
+  },
+  "goals": {
+    "1_year": {
+      "id": "1_year",
+      "title": "1-Year Goals",
+      "file": "goals/1_year.md",
+      "type": "goals",
+      "timeHorizon": "1 year",
+      "duration": "30 minutes",
+      "description": "Annual goal planning across all 6 life dimensions",
+      "dimensions": [
+        "career_business",
+        "relationships",
+        "health",
+        "meaning_purpose",
+        "finances",
+        "fun_joy"
+      ],
+      "tags": ["goals", "planning", "annual"],
+      "difficulty": "beginner",
+      "version": "1.0.0"
+    },
+    "3_year": {
+      "id": "3_year",
+      "title": "3-Year Goals",
+      "file": "goals/3_year.md",
+      "type": "goals",
+      "timeHorizon": "3 years",
+      "duration": "45 minutes",
+      "description": "Directional 3-year vision with vivid narrative",
+      "dimensions": [
+        "career_business",
+        "relationships",
+        "health",
+        "meaning_purpose",
+        "finances",
+        "fun_joy"
+      ],
+      "tags": ["goals", "vision", "planning"],
+      "difficulty": "intermediate",
+      "version": "1.0.0"
+    },
+    "10_year": {
+      "id": "10_year",
+      "title": "10-Year Goals",
+      "file": "goals/10_year.md",
+      "type": "goals",
+      "timeHorizon": "10 years",
+      "duration": "60 minutes",
+      "description": "Aspirational 10-year vision with regret minimization framework",
+      "dimensions": [
+        "career_business",
+        "relationships",
+        "health",
+        "meaning_purpose",
+        "finances",
+        "fun_joy"
+      ],
+      "tags": ["goals", "vision", "long-term"],
+      "difficulty": "advanced",
+      "version": "1.0.0"
+    }
+  },
+  "guides": {
+    "quick_start": {
+      "id": "quick_start",
+      "title": "Quick Start Guide",
+      "file": "guides/quick_start.md",
+      "type": "guide",
+      "duration": "15 minutes",
+      "description": "Get started with the CEO Personal OS in 15 minutes",
+      "tags": ["onboarding", "getting-started"],
+      "difficulty": "beginner",
+      "version": "1.0.0"
+    }
+  },
+  "examples": {
+    "daily_example": {
+      "id": "daily_example",
+      "title": "Daily Check-In Example",
+      "file": "examples/daily_example.md",
+      "type": "example",
+      "templateId": "daily",
+      "description": "Example of a filled-out daily check-in",
+      "tags": ["example", "daily"],
+      "version": "1.0.0"
+    },
+    "weekly_example": {
+      "id": "weekly_example",
+      "title": "Weekly Review Example",
+      "file": "examples/weekly_example.md",
+      "type": "example",
+      "templateId": "weekly",
+      "description": "Example of a filled-out weekly review",
+      "tags": ["example", "weekly"],
+      "version": "1.0.0"
+    }
+  },
+  "variables": {
+    "date": {
+      "name": "date",
+      "format": "YYYY-MM-DD",
+      "example": "2026-01-04",
+      "description": "Current date"
+    },
+    "year": {
+      "name": "year",
+      "format": "YYYY",
+      "example": "2026",
+      "description": "Current year"
+    },
+    "week_number": {
+      "name": "week_number",
+      "format": "Week X of YYYY",
+      "example": "Week 1 of 2026",
+      "description": "Current week number"
+    },
+    "quarter": {
+      "name": "quarter",
+      "format": "QX YYYY",
+      "example": "Q1 2026",
+      "description": "Current quarter"
+    },
+    "user_name": {
+      "name": "user_name",
+      "format": "string",
+      "example": "John Smith",
+      "description": "User's full name"
+    },
+    "company_name": {
+      "name": "company_name",
+      "format": "string",
+      "example": "Acme Corp",
+      "description": "User's company name"
+    },
+    "role": {
+      "name": "role",
+      "format": "string",
+      "example": "CEO",
+      "description": "User's role or title"
+    }
+  }
+}

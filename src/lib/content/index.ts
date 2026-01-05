@@ -2,8 +2,8 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 
-// Content repository path - update if you rename the content folder
-const contentDir = join(process.cwd(), '../ceo-personal-os-content');
+// Content folder - now lives inside the web app for simpler deployment
+const contentDir = join(process.cwd(), 'content');
 
 export interface TemplateMetadata {
   id: string;

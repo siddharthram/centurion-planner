@@ -101,12 +101,19 @@ src/
 └── types/              # TypeScript types
 ```
 
-## Content Repository
+## Content Templates
 
-Templates and frameworks live separately in `../personal-os-content/` (or `../ceo-personal-os-content/`). This separation allows:
-- Content editors to work without touching code
-- Same content to power web, CLI, mobile apps
-- Independent versioning
+Templates and frameworks live in the `content/` folder:
+```
+content/
+├── templates/     # Daily, weekly review templates
+├── frameworks/    # Life Map, Vivid Vision, etc.
+├── goals/         # 1, 3, 10-year goal templates
+├── interviews/    # Self-interview scripts
+└── guides/        # How-to guides
+```
+
+These are **starting templates only** — user data is saved to the database, not back to these files.
 
 ## Scripts
 

@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CEO Personal OS Template Schema",
+  "description": "Schema for all template files in the CEO Personal OS content repository",
+  "type": "object",
+  "required": ["id", "title", "type", "version"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the template",
+      "pattern": "^[a-z_]+$",
+      "examples": ["daily", "weekly", "north_star"]
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable title displayed in the UI",
+      "examples": ["Daily Check-In", "Weekly Review"]
+    },
+    "type": {
+      "type": "string",
+      "enum": ["review", "foundational", "interview", "goals", "framework", "guide", "example"],
+      "description": "Category of the template"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": ["daily", "weekly", "quarterly", "annual", "as-needed"],
+      "description": "How often this template should be used"
+    },
+    "duration": {
+      "type": "string",
+      "description": "Expected time to complete",
+      "examples": ["5 minutes", "20 minutes", "90 minutes", "4-6 hours"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of what this template does"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Searchable tags for categorization",
+      "examples": [["reflection", "quick", "daily"]]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"],
+      "description": "Complexity level"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version number",
+      "examples": ["1.0.0", "1.1.0", "2.0.0"]
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of major sections in the template"
+    },
+    "relatedTemplates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of related templates"
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Templates that should be completed before this one"
+    },
+    "nextSteps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Suggested templates to complete after this one"
+    }
+  }
+}

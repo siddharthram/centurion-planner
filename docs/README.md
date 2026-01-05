@@ -2,7 +2,7 @@
 
 This is the web application for Personal OS.
 
-**Content lives in**: `../personal-os-content/`
+**Content templates live in**: `content/`
 **Code lives in**: This directory
 
 ---
