@@ -25,15 +25,24 @@ export async function login(prevState: { error: string }, formData: FormData) {
 export async function signup(prevState: { error: string }, formData: FormData) {
   const supabase = await createClient()
 
-  const data = {
-    email: formData.get('email') as string,
-    password: formData.get('password') as string,
-  }
+  const email = formData.get('email') as string
+  const password = formData.get('password') as string
 
-  const { error } = await supabase.auth.signUp(data)
+  const { data: authData, error } = await supabase.auth.signUp({
+    email,
+    password,
+  })
 
   if (error) {
     return { error: error.message }
+  }
+
+  // Create profile for the new user (the trigger should handle this, but this is a fallback)
+  if (authData.user) {
+    await supabase.from('profiles').upsert({
+      id: authData.user.id,
+      email: authData.user.email,
+    }, { onConflict: 'id' })
   }
 
   revalidatePath('/', 'layout')

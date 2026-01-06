@@ -12,6 +12,8 @@ This document defines who you are, what you're building, and what matters most a
 
 Update this annually or whenever your priorities shift.
 
+> **Note**: For time-bound goals (1-year, 3-year, 10-year), use the **Goals** section. This document is for timeless truths about who you are.
+
 ---
 
 ## Who You Are
@@ -36,45 +38,6 @@ Rank your top 5 priorities for this season of life. Be honest. If family is #1 b
 
 ---
 
-## Your Definition of Success (This Year)
-
-What does success look like by the end of this year? Not aspirational fluff — actual, observable outcomes.
-
-Examples:
-- "I take [X] weeks fully offline with family"
-- "I sleep 7+ hours [X] nights per week"
-- "I complete [specific project or milestone]"
-- "I spend quality time with [person] doing [activity] weekly"
-- "I feel energized more days than not"
-
-**Your definition**:
-
--
--
--
-
----
-
-## Your Definition of Success (10 Years)
-
-Forget realistic. If you could design the next 10 years with no constraints, what does your life look like?
-
-Consider:
-- What are you doing day-to-day?
-- Where do you live?
-- Who are you with?
-- What have you built or contributed?
-- How do you spend your time?
-- What does your financial situation enable?
-- What are you known for?
-- How do you feel most days?
-
-**Your 10-year vision**:
-
-[Write 1-3 paragraphs]
-
----
-
 ## Non-Negotiables
 
 What are the absolute lines you will not cross? These are your guardrails.
@@ -94,9 +57,9 @@ Examples:
 
 ---
 
-## What You're Saying No To (This Year)
+## What You're Saying No To (This Season)
 
-Clarity comes from subtraction. What are you explicitly choosing NOT to do this year?
+Clarity comes from subtraction. What are you explicitly choosing NOT to do right now?
 
 Examples:
 - "No new major commitments until [existing commitment] is complete"

@@ -7,26 +7,23 @@ interface PageProps {
   params: Promise<{ type: string }>
 }
 
-const validGoalTypes = ['1-year', '3-year', '10-year']
+const validGoalTypes = ['1-year']
 
 const goalTypeMetadata: Record<string, { title: string; description: string }> = {
   '1-year': {
     title: '1-Year Goals',
     description: 'Concrete achievements for the next 12 months',
   },
-  '3-year': {
-    title: '3-Year Goals',
-    description: 'Strategic direction and major milestones',
-  },
-  '10-year': {
-    title: '10-Year Goals',
-    description: 'Bold vision and long-term aspirations',
-  },
 }
 
 export default async function GoalPage({ params }: PageProps) {
   const { type } = await params
   const supabase = await createClient()
+
+  // Redirect old 3-year and 10-year pages to Life Vision
+  if (type === '3-year' || type === '10-year') {
+    redirect('/documents/life_vision')
+  }
 
   // Validate goal type
   if (!validGoalTypes.includes(type)) {

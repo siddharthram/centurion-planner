@@ -1,6 +1,6 @@
 import { getAuthenticatedUser, successResponse, errorResponse, unauthorizedResponse } from '@/lib/supabase/api'
 
-const validDocumentTypes = ['north_star', 'vivid_vision', 'principles', 'memory']
+const validDocumentTypes = ['life_vision', 'principles', 'memory']
 
 export async function POST(request: Request) {
   try {

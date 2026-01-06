@@ -7,18 +7,13 @@ interface PageProps {
   params: Promise<{ type: string }>
 }
 
-const validDocumentTypes = ['north_star', 'vivid_vision', 'principles', 'memory']
+const validDocumentTypes = ['life_vision', 'principles', 'memory']
 
 const documentTypeMetadata: Record<string, { title: string; description: string; icon: string }> = {
-  'north_star': {
-    title: 'North Star',
-    description: 'Your core purpose and values across all of life',
-    icon: '⭐',
-  },
-  'vivid_vision': {
-    title: 'Vivid Vision',
-    description: 'A detailed picture of your ideal life 3 years from now',
-    icon: '🔮',
+  'life_vision': {
+    title: 'Life Vision',
+    description: 'Your identity, 10-year vision, and 3-year milestones',
+    icon: '🧭',
   },
   'principles': {
     title: 'Principles',

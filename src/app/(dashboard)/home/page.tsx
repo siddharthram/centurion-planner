@@ -63,12 +63,8 @@ export default async function DashboardPage() {
   const recentReviews = recentReviewsResult.data || []
 
   // Check what's completed
-  const hasNorthStar = documents.some(d => d.type === 'north_star')
-  const hasFoundation = hasNorthStar
-
-  const has10YearGoals = goals.some(g => g.type === '10-year')
-  const has3YearGoals = goals.some(g => g.type === '3-year')
-  const has1YearGoals = goals.some(g => g.type === '1-year')
+  const hasLifeVision = documents.some(d => d.type === 'life_vision')
+  const has1YearGoals = goals.some(g => g.time_horizon === '1_year')
 
   // Calculate stats (use defaults if no stats row yet)
   const currentStreak = stats?.current_daily_streak || 0
@@ -84,39 +80,23 @@ export default async function DashboardPage() {
   const today = new Date().toISOString().split('T')[0]
   const hasReviewedToday = recentReviews.some(r => r.date === today)
 
-  // Define the setup journey
+  // Define the setup journey (simplified: Life Vision → 1-Year Goals → Reviews)
   const setupSteps: SetupStep[] = [
     {
-      id: 'foundation',
-      title: 'Define Your Foundation',
-      description: 'Start with your North Star — your core values, identity, and what matters most to you.',
-      href: '/documents/north_star',
-      completed: hasFoundation,
-      icon: '⭐',
-    },
-    {
-      id: 'vision',
-      title: 'Create Your 10-Year Vision',
-      description: 'Where do you want to be in 10 years? Dream big and be specific.',
-      href: '/goals/10-year',
-      completed: has10YearGoals,
-      icon: '🔭',
-    },
-    {
-      id: 'goals-3',
-      title: 'Set 3-Year Milestones',
-      description: 'Break your vision into strategic 3-year goals across all areas of life.',
-      href: '/goals/3-year',
-      completed: has3YearGoals,
-      icon: '🎯',
+      id: 'life-vision',
+      title: 'Create Your Life Vision',
+      description: 'Define who you are, where you're going (10-year vision), and how you'll get there (3-year milestones).',
+      href: '/documents/life_vision',
+      completed: hasLifeVision,
+      icon: '🧭',
     },
     {
       id: 'goals-1',
-      title: 'Plan This Year',
-      description: 'Define concrete, actionable goals for the next 12 months.',
+      title: 'Set 1-Year Goals',
+      description: 'Define concrete, actionable goals for the next 12 months across all areas of life.',
       href: '/goals/1-year',
       completed: has1YearGoals,
-      icon: '📋',
+      icon: '🎯',
     },
     {
       id: 'reviews',
@@ -398,13 +378,13 @@ export default async function DashboardPage() {
               </div>
             </Link>
             <Link
-              href="/documents"
+              href="/documents/life_vision"
               className="flex items-center gap-3 rounded-lg border border-zinc-200 bg-white p-4 transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800"
             >
-              <span className="text-2xl">⭐</span>
+              <span className="text-2xl">🧭</span>
               <div>
-                <h3 className="font-medium text-zinc-900 dark:text-zinc-50">Foundation</h3>
-                <p className="text-sm text-zinc-500">Revisit your North Star</p>
+                <h3 className="font-medium text-zinc-900 dark:text-zinc-50">Life Vision</h3>
+                <p className="text-sm text-zinc-500">Revisit your foundation</p>
               </div>
             </Link>
           </div>
@@ -421,7 +401,7 @@ export default async function DashboardPage() {
                 Why this order?
               </h3>
               <p className="mt-1 text-sm text-amber-700 dark:text-amber-300">
-                Your North Star defines who you are. Your goals define where you're going.
+                Your Life Vision defines who you are and where you're going. Your 1-year goals make it actionable.
                 Your reviews track your progress. Each step builds on the last — that's what makes this a system, not just a collection of documents.
               </p>
             </div>

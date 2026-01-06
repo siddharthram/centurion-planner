@@ -24,16 +24,11 @@ export default async function DocumentsPage() {
 
   const documentTypes = [
     {
-      type: 'north_star',
-      title: 'North Star',
-      description: 'Your core purpose and values across all of life',
-      icon: '⭐',
-    },
-    {
-      type: 'vivid_vision',
-      title: 'Vivid Vision',
-      description: 'A detailed picture of your ideal life 3 years from now',
-      icon: '🔮',
+      type: 'life_vision',
+      title: 'Life Vision',
+      description: 'Your identity, 10-year vision, and 3-year milestones — all in one place',
+      icon: '🧭',
+      primary: true,
     },
     {
       type: 'principles',
@@ -61,7 +56,7 @@ export default async function DocumentsPage() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-3">
           {documentTypes.map((docType) => {
             const doc = documents?.find((d) => d.type === docType.type)
             const lastUpdated = doc
@@ -71,12 +66,17 @@ export default async function DocumentsPage() {
                   year: 'numeric',
                 })
               : null
+            const isPrimary = 'primary' in docType && docType.primary
 
             return (
               <Link
                 key={docType.type}
                 href={`/documents/${docType.type}`}
-                className="block rounded-lg border border-zinc-200 bg-white p-6 transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+                className={`block rounded-lg border p-6 transition-colors ${
+                  isPrimary
+                    ? 'border-amber-300 bg-amber-50 hover:bg-amber-100 dark:border-amber-700 dark:bg-amber-950/30 dark:hover:bg-amber-950/50'
+                    : 'border-zinc-200 bg-white hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800'
+                }`}
               >
                 <div className="mb-3 text-3xl">{docType.icon}</div>
                 <h2 className="mb-2 text-xl font-semibold text-zinc-900 dark:text-zinc-50">
@@ -85,6 +85,11 @@ export default async function DocumentsPage() {
                 <p className="mb-4 text-sm text-zinc-600 dark:text-zinc-400">
                   {docType.description}
                 </p>
+                {isPrimary && !doc && (
+                  <p className="mb-2 text-xs font-medium text-amber-700 dark:text-amber-400">
+                    ✨ Start here
+                  </p>
+                )}
                 {lastUpdated ? (
                   <p className="text-xs text-zinc-500 dark:text-zinc-500">
                     Last updated {lastUpdated}
@@ -105,18 +110,18 @@ export default async function DocumentsPage() {
           </h2>
           <div className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
             <p>
-              <strong>North Star:</strong> Your ultimate purpose and values across all of life — who you want to be, what you stand for, and the legacy you're building.
-            </p>
-            <p>
-              <strong>Vivid Vision:</strong> A detailed, immersive picture of your ideal life 3 years from now — career, relationships, health, home, and everything that matters to you. Written in present tense as if it's already happened.
+              <strong>Life Vision:</strong> Your master document — who you are (identity & values), where you're going (10-year vision), and how you'll get there (3-year milestones). This is the foundation everything else builds on.
             </p>
             <p>
               <strong>Principles:</strong> Rules and frameworks for decision-making. How you operate and what guides your choices.
             </p>
             <p>
-              <strong>Memory:</strong> Key insights, lessons learned, and patterns you've discovered about yourself across all areas of life.
+              <strong>Memory:</strong> Key insights, lessons learned, and patterns you've discovered about yourself. Updated after major reviews and realizations.
             </p>
           </div>
+          <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-500">
+            For tactical annual goals, use the <Link href="/goals/1_year" className="text-amber-600 hover:underline dark:text-amber-400">1-Year Goals</Link> page.
+          </p>
         </div>
       </div>
     </div>
