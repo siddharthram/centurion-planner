@@ -1,3 +1,11 @@
+---
+id: memory
+title: Memory
+type: foundational
+version: 1.0.0
+description: Key insights and lessons learned from your journey
+---
+
 # Memory
 
 This document stores key insights, patterns, and lessons extracted from your past reviews, notes, and reflections.

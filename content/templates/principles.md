@@ -1,3 +1,11 @@
+---
+id: principles
+title: Operating Principles
+type: foundational
+version: 1.0.0
+description: Decision-making framework and values
+---
+
 # Operating Principles
 
 These principles guide how you use this system and make decisions. Edit them to reflect your actual beliefs.

@@ -1,3 +1,11 @@
+---
+id: north_star
+title: North Star
+type: foundational
+version: 1.0.0
+description: Your core purpose and values across all of life
+---
+
 # North Star
 
 This document defines who you are, what you're building, and what matters most across all areas of your life. It's your reference point when you feel lost, distracted, or misaligned.

@@ -91,7 +91,7 @@ export default async function Home() {
             href="/signup"
             className="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-orange-500/25 transition-all hover:from-amber-600 hover:to-orange-600 hover:shadow-xl hover:shadow-orange-500/30"
           >
-            Get Started Free
+            Get Started
           </a>
           <a
             href="/login"
