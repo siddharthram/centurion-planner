@@ -29,7 +29,7 @@ export default async function DashboardPage() {
       .eq('user_id', user.id),
     supabase
       .from('goals')
-      .select('type')
+      .select('time_horizon')
       .eq('user_id', user.id),
     supabase
       .from('reviews')
@@ -85,7 +85,7 @@ export default async function DashboardPage() {
     {
       id: 'life-vision',
       title: 'Create Your Life Vision',
-      description: 'Define who you are, where you're going (10-year vision), and how you'll get there (3-year milestones).',
+      description: "Define who you are, where you're going (10-year vision), and how you'll get there (3-year milestones).",
       href: '/documents/life_vision',
       completed: hasLifeVision,
       icon: '🧭',
